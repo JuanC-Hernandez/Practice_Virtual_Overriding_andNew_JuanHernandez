@@ -47,7 +47,7 @@ namespace Practice_Virtual_Overriding_andNew_JuanHernandez
         public virtual bool Withdraw(double amount) 
         {
             bool completed = false;
-            if (amount > 0 || Balance > amount) 
+            if (amount > 0 && Balance > amount) 
             { 
                 Balance -= amount;
                 completed = true;
@@ -55,6 +55,7 @@ namespace Practice_Virtual_Overriding_andNew_JuanHernandez
             else
             {
                 completed=false;
+                Console.WriteLine("Cant Withdraw");
             }
             return completed;
         }
@@ -62,7 +63,7 @@ namespace Practice_Virtual_Overriding_andNew_JuanHernandez
         // Override to string
         public override string ToString()
         {
-            return $"{this.GetType()} - {Name} - {AccountNumber} - {Balance}";
+            return $"{this.GetType()} - {Name} - Account Number: {AccountNumber} - Balance: ${Balance}";
         }
     }
 }

@@ -32,7 +32,7 @@ namespace Practice_Virtual_Overriding_andNew_JuanHernandez
         // Override to string method
         public override string ToString()
         {
-            return base.ToString() + $"Interest: {Interest}";
+            return base.ToString() + $" - Interest: ${Interest}";
         }
     }
 }

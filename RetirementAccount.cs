@@ -14,5 +14,10 @@ namespace Practice_Virtual_Overriding_andNew_JuanHernandez
 
         }
         // Method
+        public virtual bool Withdraw()
+        {
+            Console.WriteLine("Cannot withdraw from a retirement account");
+            return false;
+        }
     }
 }

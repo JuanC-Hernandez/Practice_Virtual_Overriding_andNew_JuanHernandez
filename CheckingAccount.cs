@@ -23,13 +23,13 @@ namespace Practice_Virtual_Overriding_andNew_JuanHernandez
         // Override Method
         public override bool Withdraw(double amount)
         {
-            if (base.Withdraw(amount))
+            if (amount > 0 && Balance > amount)
             {
-
+                Balance -= amount;
             }
             else
             {
-                base.Balance -= amount;
+                Console.WriteLine("Cant Withdraw");
             }
             return base.Withdraw(amount);
         }
@@ -37,7 +37,7 @@ namespace Practice_Virtual_Overriding_andNew_JuanHernandez
         // Override to string method
         public override string ToString()
         {
-            return  base.ToString() + $"Over Draft Fee: {Overdraftfee}";
+            return  base.ToString() + $" - Over Draft Fee: ${Overdraftfee}";
         }
     }
 }
